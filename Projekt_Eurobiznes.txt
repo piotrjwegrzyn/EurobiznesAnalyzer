@@ -1,0 +1,55 @@
+Cel programu:
+
+Sprawdzić częstość występowania danych pól + dwójek lub trójek
+Porównać ceny-zyski pól + ceny inwestycji w pole (różne ceny domów)
+
+właściwości Eurobiznesu:
+
+po 16 kart szansa na talie (są dwie)
+w tym na ruch w talii wpływa:
+3 niebieskie:
+-wracasz na start
+-wracasz do Wiednia
+-idziesz do więzienia
+7 czerwonych:
+-cofasz sie o trzy pola
+-wracasz na start
+-idziesz do więzienia
+-idziesz do Kolei Wschodnich
+-wracasz do Madrytu
+-wracasz do Brukseli
+-idziesz do Neapolu
+
+ilość pól - 40
+
+statystyka gry, jak często stajesz na polu
+symulacja gry w czasie rzeczywistym, dla sprawdzenia 
+
+klasa gra
+int pozycjaGracza
+lista <pole>
+
+funkcja losujLiczbe (3 - 23)
+
+
+
+klasa pole
+int numerPola;
+
+klasa miasto : pole
+double wartosc
+string nazwa
+
+klasa szansa niebieska : pole
+enum
+funkcja losuj niebieskie	
+	switch case(1):
+		przeniesienie = -3
+		return przeniesienie
+	case(2):
+		przeniesienie = 
+		return przeniesienie
+
+klasa szansa czerwona : pole
+funkcja losuj czerwone
+	
