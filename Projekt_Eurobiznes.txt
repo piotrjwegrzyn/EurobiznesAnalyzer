@@ -15,10 +15,10 @@ w tym na ruch w talii wpływa:
 -cofasz sie o trzy pola // pole nr pozycjaGracza - 3
 -wracasz na start	// pole nr 1
 -idziesz do więzienia	// pole nr 10
--idziesz do Kolei Wschodnich	// pole nr 35
--wracasz do Madrytu
--wracasz do Brukseli
--idziesz do Neapolu
+-idziesz do Kolei Wschodnich	// pole nr 36
+-wracasz do Madrytu	// pole nr 15
+-wracasz do Brukseli	// pole nr 24
+-idziesz do Neapolu	// pole nr 7
 
 ilość pól - 40
 
