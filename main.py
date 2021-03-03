@@ -3,6 +3,8 @@ import random
 class player:
     playerPos = 1
     isInPrison = False
+    cash = 3000
+    list <fieldXD> properties
 
 
 class game:
@@ -15,10 +17,34 @@ class fieldXD:
 class miasto(fieldXD):
     value
     cityName
+    isBought = False    # indicates if field is bought
+    numberOfHouses  # hotel counts as 5
+    map<miasto, player> owner   # field owner
+    housePay[5] # payment depends on how many houses there are
+    houseCost   # each house cost       
 
-    def setValues(self, cost, name):
+    def payLoad(self, pay):
+
+
+    def setValues(self, cost, name, house1, house2, house3, house4, hotel, houseCosts):
         self.value = cost
         self.cityName = name
+        self.housePay[0] = house1
+        self.housePay[1] = house2
+        self.housePay[2] = house3
+        self.housePay[3] = house4
+        self.housePay[4] = hotel
+        self.houseCost = houseCosts
+        
+    def buyField(self, this):
+        if(self.isBought == False):
+            print("Czy chcesz kupic to pole?")
+        else:
+            payment = payLoad(self, pay)
+            if(this.cash > payment):
+                this.cash = this.cash - payment
+                owner[self].cash = owner[self].cash + payment
+
 
 class blueChance(fieldXD):
     def randomizeBlue(this):
@@ -33,6 +59,8 @@ class blueChance(fieldXD):
         elif(case == 3):
             this.pozycjaGracza = 10
             this.isInPrison = True
+
+
 
 
 class redChance(fieldXD):
