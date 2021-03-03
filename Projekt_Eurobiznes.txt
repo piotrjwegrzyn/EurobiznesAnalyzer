@@ -8,14 +8,14 @@ właściwości Eurobiznesu:
 po 16 kart szansa na talie (są dwie)
 w tym na ruch w talii wpływa:
 3 niebieskie:
--wracasz na start
--wracasz do Wiednia
--idziesz do więzienia
+-wracasz na start // pole nr1
+-wracasz do Wiednia	// pole nr 40
+-idziesz do więzienia	// pole nr 10
 7 czerwonych:
--cofasz sie o trzy pola
--wracasz na start
--idziesz do więzienia
--idziesz do Kolei Wschodnich
+-cofasz sie o trzy pola // pole nr pozycjaGracza - 3
+-wracasz na start	// pole nr 1
+-idziesz do więzienia	// pole nr 10
+-idziesz do Kolei Wschodnich	// pole nr 35
 -wracasz do Madrytu
 -wracasz do Brukseli
 -idziesz do Neapolu
