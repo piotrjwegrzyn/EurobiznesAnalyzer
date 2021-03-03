@@ -25,8 +25,9 @@ ilość pól - 40
 statystyka gry, jak często stajesz na polu
 symulacja gry w czasie rzeczywistym, dla sprawdzenia 
 
+int pozycjaGracza = 1
+
 klasa gra
-int pozycjaGracza
 lista <pole>
 
 funkcja losujLiczbe (3 - 23)
@@ -42,12 +43,12 @@ string nazwa
 
 klasa szansa niebieska : pole
 enum
-funkcja losuj niebieskie	
+funkcja losuj niebieskie()	
 	switch case(1):
-		przeniesienie = -3
+		pozycjaGracza = pozycjaGracza -3
 		return przeniesienie
 	case(2):
-		przeniesienie = 
+		pozycjaGracza = 
 		return przeniesienie
 
 klasa szansa czerwona : pole
