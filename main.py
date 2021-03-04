@@ -1,6 +1,7 @@
 import random
 
 class player:
+    playerID
     playerPos = 1
     isInPrison = False
     cash = 3000
@@ -20,7 +21,31 @@ class player:
 
 
 class game:
+    map<int, player> players
     map<int, fieldXD> fields
+    number
+
+    def setNumberOfPlayers():
+        number = input("Set number of players")
+
+    def setPlayerIDs(number):
+
+
+    def dice(this):
+        a = random.randint(1,6)
+        b = random.randint(1,6)
+        Sum = a + b
+        if (a == b):
+            a = random.randint(1, 6)
+            b = random.randint(1, 6)
+            Sum += a + b
+            if (a == b):
+                this.isInPrison = True
+                return Sum
+        return Sum
+
+
+
 
 class fieldXD:
     fieldNumber
