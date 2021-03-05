@@ -1,5 +1,20 @@
 import random
 
+def dice(this):
+        a = random.randint(1,6)
+        b = random.randint(1,6)
+        Sum = a + b
+        if (a == b):
+            a = random.randint(1, 6)
+            b = random.randint(1, 6)
+            Sum += a + b
+            if (a == b):
+                this.playerPos = 10
+                this.isInPrison = True
+                return Sum
+        return Sum
+
+
 class player:
     playerID
     playerPos = 1
@@ -14,64 +29,58 @@ class player:
         if(ifToBuy == 'y'):
                var = input("Enter field number: ")
                if(owner[properties[var]] == this):
-                   this.cash 
+                   if(properties[var].numberOfHouses < 5):
+                    this.cash - properties[var].houseCost
+                    properties[var].numberOfHouses = properties[var].numberOfHouses + 1
+
         else:
                pass
+
+    def move(this):
+
             
 
 
 class game:
     map<int, player> players
     map<int, fieldXD> fields
-    number
+    map<string, country> countries
+    number = 0
 
     def setNumberOfPlayers():
         number = input("Set number of players")
 
     def setPlayerIDs(number):
-
-
-    def dice(this):
-        a = random.randint(1,6)
-        b = random.randint(1,6)
-        Sum = a + b
-        if (a == b):
-            a = random.randint(1, 6)
-            b = random.randint(1, 6)
-            Sum += a + b
-            if (a == b):
-                this.isInPrison = True
-                return Sum
-        return Sum
-
-
-
+        for x in range(1, number):
+            new = player()
+            new.playerID = x
+            players[x] = new
 
 class fieldXD:
     fieldNumber
 
 
-class miasto(fieldXD):
+class city(fieldXD):
     value
     cityName
     isBought = False    # indicates if field is bought
     numberOfHouses = 0  # hotel counts as 5
-    map<miasto, player> owner   # field owner
-    housePay[6] # payment depends on how many houses there are
+    map<city, player> owner   # field owner
+    map<int, int> housePay # payment depends on how many houses there are
     houseCost   # each house cost       
 
     def payLoad(self, pay):
         pay = 0
         if(numberOfHouses == 0):
-            pay = self.housePay[5]
+            pay = self.housePay[5]  # basic pay
         elif(numberOfHouses == 1):
-            pay = self.housePay[0]
+            pay = self.housePay[0]  # one-house pay
         elif(numberOfHouses == 2):
-            pay = self.housePay[1]
+            pay = self.housePay[1]  # two houses pay
         elif(numberOfHouses == 3):
-            pay = self.housePay[2]
+            pay = self.housePay[2]  # three houses pay
         elif(numberOfHouses == 4):
-            pay = self.housePay[3]
+            pay = self.housePay[3]  # four houses pay
         elif(numberOfHouses == 5):
             pay = self.housePay[4]
 
@@ -88,7 +97,7 @@ class miasto(fieldXD):
         self.housePay[5] = basicCost
         self.houseCost = houseCosts
         
-    def buyField(self, this):
+    def buyCity(self, this):
         if(self.isBought == False):
             print("Do you want to buy this field? y/n")
             wantToBuy = input()
@@ -99,6 +108,22 @@ class miasto(fieldXD):
             if(this.cash > payment):
                 this.cash = this.cash - payment
                 owner[self].cash = owner[self].cash + payment
+
+class country:
+    countryName
+    countrySize
+    countrySide # array of cities in a country
+
+    def setCities(here, city1, city2, city3):
+        if(here.countrySize == 3):
+            here.countrySide[0] = city1
+            here.countrySide[1] = city2
+            here.countrySide[2] = city3
+        else:
+            here.countrySide[0] = city1
+            here.countrySide[1] = city2
+
+
 
 
 
